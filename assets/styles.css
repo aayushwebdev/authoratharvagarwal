@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,6 +13,10 @@ body {
     background-color: #fdf8f4;
     color: #2c2c2c;
     /* padding: 20px; */
+}
+
+a {
+    text-decoration: none;
 }
 
 /* width */
@@ -60,6 +65,7 @@ nav ul li a {
     cursor: pointer;
 }
 
+
 /* Hero Section */
 .hero {
     display: flex;
@@ -105,6 +111,9 @@ nav ul li a {
 }
 
 .explore-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: black;
     color: white;
     border-radius: 2rem;
@@ -112,22 +121,6 @@ nav ul li a {
     padding: 0 20px;
 }
 
-/* Image Cards */
-.hero-image {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* Hero Section */
-.hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0;
-}
-
-/* Hero Image Container */
 .hero-image-container {
     position: relative;
     max-width: 100%; 
@@ -136,21 +129,11 @@ nav ul li a {
     overflow: hidden;
 }
 
-/* Hero Image */
 .hero-image {
     width: 100%;
-    
-    
-    /* Using a better mask */
-    /* -webkit-mask-image: url("../assets/mask.png");
-    mask-image: url("../assets/mask.png");
-    -webkit-mask-size: cover;
-    mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center; */
 }
+
+
 
 /* OUR JOURNEY */
 .our-journey{
@@ -174,10 +157,15 @@ nav ul li a {
     margin-bottom: 1.5rem;
 }
 
-.our-journey-heading button {
-    padding: 1rem 3rem;
+.our-journey-heading a {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 25%;
     background-color: transparent;
     font-size: 0.9rem;
+    cursor: pointer;
+    color: black;
     border: 1px solid black;
     border-radius: 2rem;
 }
@@ -654,6 +642,8 @@ nav ul li a {
 
 .social-icons {
     display: flex;
+    justify-content: right;
+    margin-top: 1rem;
     gap: 10px;
 }
 
@@ -732,4 +722,155 @@ nav ul li a {
     .discount-badge {
         left: 5%;
     }
+}
+
+
+
+/* ABOUT PAGE */
+
+.about-main {
+    width: 100%;
+}
+
+.main-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2rem;
+    width: auto;
+    height: 450px;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-main-img {
+    background-image: url(../assets/about-main.jpg);
+}
+
+.main-img h3 {
+    font-size: 3rem;
+    color: white;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.main-img p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255,0.8);
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-stretch: wider;
+}
+
+.about-content {
+    margin: 6rem 2rem;
+}
+
+.about-content h6, .our-mission h6, .our-value h6, .about-journey-content h6 {
+    font-size: 1.4rem;
+    font-weight: 200;
+    margin-bottom: 0.6rem;
+}
+
+.about-content h4, .our-mission h4, .our-value h4, .about-journey-content h4 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.about-content hr {
+    margin: 2rem 0;
+}
+
+.about-content-child {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.about-child1, .about-child2 {
+    width: 50%;
+}
+
+.about-child1 p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: rgba(0, 0, 0,0.7);
+    line-height: 1.5;
+}
+.about-child2 p {
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0,0.7);
+    line-height: 1.5;
+}
+
+.about-story {
+    background-image: url(../assets/about2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2rem;
+    color: white;
+    width: auto;
+    height: 600px;
+    padding: 4rem 2rem;
+    display: flex;
+    gap: 5rem;
+    position: relative;
+    border-radius: 2rem;
+}
+
+.our-mission {
+    text-align: left;
+    position: absolute;
+    bottom: 2rem;
+    max-width: 600px;
+}
+
+.our-value{
+    text-align: right;
+    position: absolute;
+    right: 2rem;
+    max-width: 600px;
+}
+
+.our-value>p, .our-mission>p {
+    color: rgba(255, 255, 255,0.6);
+    margin: 2rem 0;
+}
+
+.about-journey {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin: 8rem 2rem;
+}
+
+.about-journey-img{
+    width: 50%;
+    height: 500px;
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.about-journey-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-journey-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-journey-content p {
+    margin: 2rem 0;
+    line-height: 1.2;
+    font-size: 1.1rem;
 }
